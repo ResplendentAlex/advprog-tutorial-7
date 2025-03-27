@@ -90,5 +90,16 @@ If both the id and the url of the Subscriber is unique, then the useage of DashM
 I think that it is best if we use both DashMap and Singleton pattern in the same project. While the Singleton pattern may be able to use the lazy_static to provide a safe access to HashMap datas, it does not prevent other issues that may arrise to concurrent access to the HashMap. The DashMap, instead, helps us in providing a safe access that runs concurrently, thus allowing concurrent access.
 
 #### Reflection Publisher-2
+1. In the Model-View Controller (MVC) compound pattern, there is no “Service” and “Repository”. Model in MVC covers both data storage and business logic. Explain based on your understanding of design principles, why we need to separate “Service” and “Repository” from a Model?
+
+It all comes down to the compliance of one of the SOLID principles, which is the "**Single Responsibility Principle (SRP)**", as well as the "**Separation of Concerns**" principle. We know that the Model in MVC is meants as a data representation. By separating it to the Service and Repoistory, we can divide it into two different roles, where the Repository handles data access and modification layer, while the Service handles the business logic. By doing this, we could effectively separate concerns and responsibilities of each component, allowing the codebase to be more modular. 
+
+2. What happens if we only use the Model? Explain your imagination on how the interactions between each model (Program, Subscriber, Notification) affect the code complexity for each model?
+
+If we only use the Model, then the codebase would be less modular than and harder to maintain. This is because the Model would handle two different responsibilities, that is the data storage and business logic, which would violate the SRP. This may, in turn, leads to an increase in code complexity and even tighter coupling in the codebase.
+
+3. Have you explored more about Postman? Tell us how this tool helps you to test your current work. You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project or any of your future software engineering projects.
+
+I've used Postman in a previous project before. It is especially helpful for me to check whether my implemented APIs have already hit the correct endpoints, and whether my HTTP requests have been successfully accomplished. This allows me to be able to quickly navigate between APIs and do very quick testing on my projects, increasing my overall workflow, as well as increasing my reducing the amount of workload I need to do. Since I have already been using it previously, it would be a shame not to use in future projects, since it has provided me with ease in sharing APi documentation with other developers.
 
 #### Reflection Publisher-3
