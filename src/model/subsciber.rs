@@ -7,7 +7,7 @@ use crate::model::notification::Notification;
 #[derive(Debug, Clone, Deserialize, Serialize)]
 #[serde(crate = "rocket::serde")]
 pub struct Subscriber {
-    pub url: String,
-    pub name: String,
+  pub url: String,
+  pub name: String,
 }
 
